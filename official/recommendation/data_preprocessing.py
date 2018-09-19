@@ -467,7 +467,7 @@ def instantiate_pipeline(dataset, data_dir, batch_size, eval_batch_size,
     except tf.errors.NotFoundError:
       return
 
-  return ncf_dataset
+  return ncf_dataset, cleanup
 
 
 def make_deserialize(params, batch_size, training=False):
